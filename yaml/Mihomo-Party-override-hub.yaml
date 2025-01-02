@@ -674,6 +674,7 @@ rule-providers:
     type: http
 
 rules:
+  - DOMAIN-KEYWORD,zhousijiasu,手动切换
   - DOMAIN-KEYWORD,hongxingdl,手动切换
   - DOMAIN-SUFFIX,binance.com,手动切换
   - DOMAIN-KEYWORD,binance,手动切换
