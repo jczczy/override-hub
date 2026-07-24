@@ -119,6 +119,7 @@ proxy-groups:
       - 台湾节点
       - 日本节点
       - 美国节点
+      - 美国(故障转移)
       - 韩国节点
       - 专线节点
       - 手动切换
@@ -179,6 +180,31 @@ proxy-groups:
       - 香港节点
       - 自动选择
       - 手动切换
+  - name: Javporn
+    icon: https://raw.githubusercontent.com/jczczy/self-rule/main/javbus.png
+    type: select
+    proxies:
+      - 狮城节点
+      - 日本节点
+      - 台湾节点
+      - 美国节点
+      - 韩国节点
+      - 香港节点
+      - 自动选择
+      - 手动切换
+  - name: Cryptocurrency
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency.png
+    type: select
+    proxies:
+      - 狮城节点
+      - 台湾节点
+      - 美国节点
+      - 韩国节点
+      - 香港节点
+      - 日本节点
+      - 自动选择
+      - 手动切换
+      - DIRECT
   - name: 巴哈姆特
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png
     type: select
@@ -230,6 +256,7 @@ proxy-groups:
       - 台湾节点
       - 狮城节点
       - 美国节点
+      - 美国(故障转移)
       - 韩国节点
       - DIRECT
   - name: 微软Bing
@@ -451,7 +478,7 @@ proxy-groups:
   - name: 美国节点
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
     include-all: true
-    filter: (?i)(US|USA|U\.S\.A|United States|UnitedStates|美国|美國|美西|美東|洛杉矶|洛杉磯|圣何塞|聖荷西|西雅图|西雅圖|芝加哥|达拉斯|達拉斯|硅谷|矽谷|俄勒冈|俄勒岡|拉斯维加斯|拉斯維加斯)
+    filter: (?i)(\bUS\b|\bUSA\b|U\.S\.A|United States|UnitedStates|美国|美國|美西|美東|洛杉矶|洛杉磯|圣何塞|聖荷西|西雅图|西雅圖|芝加哥|达拉斯|達拉斯|硅谷|矽谷|俄勒冈|俄勒岡|拉斯维加斯|拉斯維加斯)
     type: url-test
     interval: 300
     tolerance: 50
@@ -463,7 +490,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     include-all: true
-    filter: (?i)(US|USA|U\.S\.A|United States|UnitedStates|美国|美國|美西|美東|洛杉矶|洛杉磯|圣何塞|聖荷西|西雅图|西雅圖|芝加哥|达拉斯|達拉斯|硅谷|矽谷|俄勒冈|俄勒岡|拉斯维加斯|拉斯維加斯)
+    filter: (?i)(\bUS\b|\bUSA\b|U\.S\.A|United States|UnitedStates|美国|美國|美西|美東|洛杉矶|洛杉磯|圣何塞|聖荷西|西雅图|西雅圖|芝加哥|达拉斯|達拉斯|硅谷|矽谷|俄勒冈|俄勒岡|拉斯维加斯|拉斯維加斯)
 
   - name: 美国(故障转移)
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
@@ -471,7 +498,7 @@ proxy-groups:
     url: https://www.google.com/generate_204
     interval: 300
     include-all: true
-    filter: (?i)(US|USA|U\.S\.A|United States|UnitedStates|美国|美國|美西|美東|洛杉矶|洛杉磯|圣何塞|聖荷西|西雅图|西雅圖|芝加哥|达拉斯|達拉斯|硅谷|矽谷|俄勒冈|俄勒岡|拉斯维加斯|拉斯維加斯)
+    filter: (?i)(\bUS\b|\bUSA\b|U\.S\.A|United States|UnitedStates|美国|美國|美西|美東|洛杉矶|洛杉磯|圣何塞|聖荷西|西雅图|西雅圖|芝加哥|达拉斯|達拉斯|硅谷|矽谷|俄勒冈|俄勒岡|拉斯维加斯|拉斯維加斯)
 
   - name: 美国(负载轮询)
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
@@ -480,7 +507,7 @@ proxy-groups:
     interval: 300
     strategy: round-robin
     include-all: true
-    filter: (?i)(US|USA|U\.S\.A|United States|UnitedStates|美国|美國|美西|美東|洛杉矶|洛杉磯|圣何塞|聖荷西|西雅图|西雅圖|芝加哥|达拉斯|達拉斯|硅谷|矽谷|俄勒冈|俄勒岡|拉斯维加斯|拉斯維加斯)
+    filter: (?i)(\bUS\b|\bUSA\b|U\.S\.A|United States|UnitedStates|美国|美國|美西|美東|洛杉矶|洛杉磯|圣何塞|聖荷西|西雅图|西雅圖|芝加哥|达拉斯|達拉斯|硅谷|矽谷|俄勒冈|俄勒岡|拉斯维加斯|拉斯維加斯)
 
   - name: 美国(负载散列)
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
@@ -489,7 +516,7 @@ proxy-groups:
     interval: 300
     strategy: consistent-hashing
     include-all: true
-    filter: (?i)(US|USA|U\.S\.A|United States|UnitedStates|美国|美國|美西|美東|洛杉矶|洛杉磯|圣何塞|聖荷西|西雅图|西雅圖|芝加哥|达拉斯|達拉斯|硅谷|矽谷|俄勒冈|俄勒岡|拉斯维加斯|拉斯維加斯)
+    filter: (?i)(\bUS\b|\bUSA\b|U\.S\.A|United States|UnitedStates|美国|美國|美西|美東|洛杉矶|洛杉磯|圣何塞|聖荷西|西雅图|西雅圖|芝加哥|达拉斯|達拉斯|硅谷|矽谷|俄勒冈|俄勒岡|拉斯维加斯|拉斯維加斯)
 
   - name: 台湾节点
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png
@@ -980,19 +1007,35 @@ rule-providers:
     format: text
     type: http
   FANZA:
-    url: https://raw.githubusercontent.com/jczczy/self-rule/refs/heads/main/FANZA.list
+    url: https://raw.githubusercontent.com/jczczy/self-rule/main/FANZA.list
     path: ./ruleset/FANZA.list
     behavior: classical
     interval: 86400
     format: text
     type: http
   teracloud:
-    url: https://raw.githubusercontent.com/jczczy/self-rule/refs/heads/main/teracloud.list
+    url: https://raw.githubusercontent.com/jczczy/self-rule/main/teracloud.list
     path: ./ruleset/teracloud.list
     behavior: classical
     interval: 86400
     format: text
     type: http
+  Cryptocurrency:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Cryptocurrency/Cryptocurrency.list
+    path: ./ruleset/Cryptocurrency.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Javporn:
+    url: https://raw.githubusercontent.com/jczczy/self-rule/main/Javporn.yaml
+    path: ./ruleset/Cryptocurrency.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+
 rules:
   - DOMAIN-KEYWORD,corel,REJECT
   - PROCESS-NAME,BlazingBeaks.exe,REJECT
@@ -1006,9 +1049,22 @@ rules:
   - PROCESS-NAME,CorelDRW.exe,REJECT
   - DOMAIN-SUFFIX,coreldrawchina.com,REJECT
   - DOMAIN-SUFFIX,teracloud.jp,teracloud
+  - DOMAIN-SUFFIX,infini-cloud.net,teracloud
+  - DOMAIN,kurio.infini-cloud.net,teracloud
   - DOMAIN-SUFFIX,dmm.co.jp,FANZA
-  - DOMAIN-SUFFIX,jdbstatic.com,美国节点
-  - DOMAIN-SUFFIX,javdb.com,美国节点
+  - DOMAIN-SUFFIX,jdbstatic.com,Javporn
+  - DOMAIN-SUFFIX,javdb.com,Javporn
+  - DOMAIN-SUFFIX,javbus.com,Javporn
+  - DOMAIN-SUFFIX,javcdn.cc,Javporn
+  - DOMAIN-SUFFIX,javbus22.com,Javporn
+  - DOMAIN-SUFFIX,jav.app,Javporn
+  - DOMAIN-SUFFIX,javdb.com,Javporn
+  - DOMAIN-SUFFIX,jdbimgs.com,Javporn
+  - DOMAIN-SUFFIX,jdbstatic.com,Javporn
+  - DOMAIN-SUFFIX,javcc.cc,Javporn
+  - DOMAIN-SUFFIX,javcc.com,Javporn
+  - DOMAIN-REGEX,javbus\d+\.com$,Javporn
+  - DOMAIN-REGEX,javdb\d+\.com$,Javporn
   - DOMAIN-KEYWORD,xingcloud,手动切换
   - DOMAIN-KEYWORD,xingclouds,手动切换
   - DOMAIN-KEYWORD,hktixcloud,手动切换
@@ -1025,6 +1081,8 @@ rules:
   - DOMAIN,browser-intake-datadoghq.com,֎ ChatGPT
   - DOMAIN,chat.openai.com.cdn.cloudflare.net,֎ ChatGPT
   - DOMAIN,gemini.google.com,֎ ChatGPT
+  - DOMAIN-SUFFIX,gemini.gstatic.com,֎ ChatGPT
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com,֎ ChatGPT
   - DOMAIN,openai-api.arkoselabs.com,֎ ChatGPT
   - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,֎ ChatGPT
   - DOMAIN,openaicomproductionae4b.blob.core.windows.net,֎ ChatGPT
@@ -2228,6 +2286,10 @@ rules:
   - "RULE-SET,UnBan,全球直连"
   - "RULE-SET,BanAD,广告拦截"
   - "RULE-SET,BanProgramAD,应用净化"
+  - "RULE-SET,FANZA,FANZA"
+  - "RULE-SET,teracloud,teracloud"
+  - "RULE-SET,Cryptocurrency,Cryptocurrency"
+  - "RULE-SET,Javporn,Javporn"
   - "RULE-SET,GoogleFCM,谷歌FCM"
   - "RULE-SET,GoogleCN,全球直连"
   - "RULE-SET,SteamCN,全球直连"
